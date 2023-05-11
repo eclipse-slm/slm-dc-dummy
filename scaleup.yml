@@ -1,0 +1,8 @@
+---
+- name: "Dummy - scaleup"
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - ansible.builtin.debug:
+        msg: "dummy scaleup.yml"

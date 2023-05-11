@@ -1,0 +1,8 @@
+---
+- name: "Dummy - uninstall"
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - ansible.builtin.debug:
+        msg: "dummy uninstall.yml"

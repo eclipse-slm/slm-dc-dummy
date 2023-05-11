@@ -1,0 +1,8 @@
+---
+- name: "Dummy - create vm"
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - ansible.builtin.debug:
+        msg: "dummy create_vm.yml"

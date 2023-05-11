@@ -1,0 +1,49 @@
+{
+  "capabilityClass": "DeploymentCapability",
+  "name": "Dummy",
+  "logo": "mdi-test-tube",
+  "type": [
+    "SETUP",
+    "DEPLOY"
+  ],
+  "connection": "tcp",
+  "actions": {
+    "DEPLOY": {
+      "capabilityActionClass": "AwxCapabilityAction",
+      "capabilityActionType": "DEPLOY",
+      "awxRepo": "https://github.com/FabOS-AI/fabos-slm-dc-dummy",
+      "awxBranch": "main",
+      "playbook": "deploy.yml",
+      "connectionTypes": ["ssh", "WinSsh", "WinRM"]
+    },
+    "UNINSTALL": {
+      "capabilityActionClass": "AwxCapabilityAction",
+      "capabilityActionType": "UNINSTALL",
+      "awxRepo": "https://github.com/FabOS-AI/fabos-slm-dc-dummy",
+      "awxBranch": "main",
+      "playbook": "uninstall.yml",
+      "connectionTypes": ["ssh", "WinSsh", "WinRM"]
+    },
+    "INSTALL": {
+      "capabilityActionClass": "AwxCapabilityAction",
+      "capabilityActionType": "INSTALL",
+      "awxRepo": "https://github.com/FabOS-AI/fabos-slm-dc-dummy",
+      "awxBranch": "main",
+      "playbook": "install.yml",
+      "connectionTypes": ["ssh", "WinSsh", "WinRM"]
+    },
+    "UNDEPLOY": {
+      "capabilityActionClass": "AwxCapabilityAction",
+      "capabilityActionType": "UNDEPLOY",
+      "awxRepo": "https://github.com/FabOS-AI/fabos-slm-dc-dummy",
+      "awxBranch": "main",
+      "playbook": "undeploy.yml",
+      "connectionTypes": ["ssh", "WinSsh", "WinRM"]
+    }
+  },
+  "supportedDeploymentTypes": [
+    "DOCKER_CONTAINER",
+    "DOCKER_COMPOSE"
+  ],
+  "clusterMemberTypes": []
+}

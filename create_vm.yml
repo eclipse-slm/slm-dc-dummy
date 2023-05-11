@@ -1,0 +1,13 @@
+---
+- name: "Dummy - create vm"
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - ansible.builtin.debug:
+        msg: "dummy create_vm.yml"
+
+    - ansible.builtin.set_stats:
+        data:
+          hostname: "test-vm"
+          ip: "192.168.0.100"
