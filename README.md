@@ -1,2 +1,2 @@
 # fabos-slm-dc-dummy
-Dummy deployment capability for dev
+Dummy slm capability for dev
